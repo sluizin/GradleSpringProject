@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+
+  <table border=1>
+  <tr height="40">
+	<td align="center" width="48">编号</td>
+	<td align="center" width="48">类别</td>
+	<td align="center" width="180">标题</td>
+	<td align="center" width="340">内容</td>
+	<td align="center" width="48">状态</td>
+	<td align="center" width="160">发布日期</td>
+	<td align="center" width="100">操作</td>
+  </tr>
+<#list newslist as news>
+  <tr height="30">
+	<td align="center">${news.id!}</td>
+	<td align="center">${news.targetid!}</td>
+	<td>${news.title!}</td>
+	<td>${news.content!}</td>
+	<td align="center">${news.state!}</td>
+	<td>${news.addtime?string("yyyy-MM-dd HH:mm:ss")}</td>
+	<td align="center"><a href="/GradleSpringProject/controller/news/editid/${news.id!}">修改</a>&nbsp;<a href="/GradleSpringProject/controller/news/deleteid/${news.id!}">删除</a></td>
+  </tr>
+</#list> 
+  </table>
+<br/>
+<#include "news.ftl">
+<@shownews/>
+ </body>
+</html>

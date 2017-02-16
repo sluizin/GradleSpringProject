@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases> 
+        <typeAlias alias="NewsModel" type="com.wangku.special.news.model.News"/> 
+    </typeAliases> 
+	<mappers>
+	    <mapper resource="com/wangku/special/news/mappers/NewsMapper.xml"/>
+	</mappers>
+</configuration>
